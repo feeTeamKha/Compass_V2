@@ -1,4 +1,5 @@
-![image](https://github.com/feeTeamKha/Compass_V2/assets/110970367/734743f4-641f-48c9-9b6b-32707710b125)\
+![image](https://github.com/feeTeamKha/Compass_V2/assets/110970367/cc457639-9ca7-408e-ae85-1ee915a6fa14)
+
 
 Code for Anduino Mega2560:
 
