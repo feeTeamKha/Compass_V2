@@ -13,7 +13,7 @@ Code for Anduino Mega2560:
     Serial.begin(9600);
     Serial1.begin(115200);
     Serial1.write('a');
-    delay(100);\
+    delay(100);
     Serial1.write('z');
     }
     
