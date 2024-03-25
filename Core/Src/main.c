@@ -59,17 +59,18 @@ static void MX_USART1_UART_Init(void);
 
 uint8_t rxBuffer[4];
 float Angle;
-
+uint8_t data;
 void Compass_Init(void) {
-	HAL_UART_Transmit(&huart1, 'a', 1, HAL_MAX_DELAY);
+	data = 'a';
+	HAL_UART_Transmit(&huart1, &data, 1, HAL_MAX_DELAY);
 	HAL_Delay(10);
-	HAL_UART_Transmit(&huart1, 'z', 1, HAL_MAX_DELAY);
+	data = 'z';
+	HAL_UART_Transmit(&huart1, &data, 1, HAL_MAX_DELAY);
 }
 
 void Compass_read_angle(void) {
 	HAL_UART_Receive(&huart1, rxBuffer, 4, HAL_MAX_DELAY);
-	Angle = ((rxBuffer[1] * 10000 + rxBuffer[2] * 100 + rxBuffer[3]) - 500000)
-			* 0.1;
+	Angle = ((rxBuffer[1] * 10000 + rxBuffer[2] * 100 + rxBuffer[3]) - 500000)* 0.1;
 }
 
 /* USER CODE END 0 */
